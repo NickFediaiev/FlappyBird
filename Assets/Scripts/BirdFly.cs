@@ -7,7 +7,15 @@ public class BirdFly : MonoBehaviour
 
     [SerializeField] private Rigidbody2D _rigidbody;
 
-    // Update is called once per frame
+    void Start()
+    {
+        if (_rigidbody == null)
+        {
+            Debug.LogError("Bird Rigidbody is not assigned");
+            gameObject.SetActive(false);
+        }
+    }
+    
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
