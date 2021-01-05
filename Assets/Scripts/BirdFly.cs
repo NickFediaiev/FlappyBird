@@ -24,4 +24,9 @@ public class BirdFly : MonoBehaviour
             _rigidbody.velocity = Vector2.up * Velocity;
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        GameManager.Instance.GameOver();
+    }
 }
