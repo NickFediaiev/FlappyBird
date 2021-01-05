@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            gameOverCanvas.SetActive(false);
             Time.timeScale = 1;
         }
     }
